@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-do-list</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" /> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="dist/css/style.css">
+
+</head>
+<body>
+    <!-- main container -->
+    <div class="container">  
+
+        <!-- header container ( clear + date ) -->
+        <div class="header">
+            <div class="clear">
+                    <i class="fas fa-sync"></i>
+                    
+            </div>
+            <div id="date">Date</div>
+        </div>
+
+        <!-- add input container ( input and plus )-->
+        <div class="add-to-do">
+            <input type="text" id="input" placeholder="Add a to-do">
+            <i class="fa fa-plus-circle" id="add-item-btn"></i>
+        </div>
+
+        <!-- list content container ( li items )-->
+        <div class="content">
+            <ul id="list" class="list-group">
+                <!-- <li class="item list-group-item" id="0">
+                    <i class="far fa-circle co" job="complete"></i> -->
+                    <!-- <i class="fas fa-check-circle co"></i>     -->
+                    <!-- <p class="text">Drink coffee</p> -->
+                    <!-- <i class="fas fa-check-circle"></i> -->
+                    <!-- <i class="fas fa-trash-alt de" job="delete"></i>
+                </li> -->
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="dist/js/app.js"></script>
+</body>
+</html>
