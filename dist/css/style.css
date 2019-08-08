@@ -1,3 +1,6 @@
+:root {
+    font-size: 16px;
+}
 
 * {
     margin: 0;
@@ -5,29 +8,44 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
+    outline: none;
 }
 
+html,
 body {
+    height: 100%;
+}
+body {
+    position: relative;
     padding: 0;
     margin: 0;
-    background-color: rgba(0,0,0,0.1);
-    background: url("../img/agenda-calendar-checklist-3243.jpg");
+    background-color: rgba(0, 0, 0, 0.1);
+    background: url('../img/agenda-calendar-checklist-3243.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     font-family: 'Titillium Web', sans-serif;
+    overflow: hidden;
 }
 
 /* ------------ container ------------ */
 .container {
-    padding:10px;
-    max-width:375px;
-    margin:0 auto;
-    background-color: #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px;
+    height: fit-content;
+    width: 23.5rem;
+    margin: 0 auto;
+    background-color: #fff;
+    
 }
 
 .header {
     width: 100%;
-    height:200px;
+    height: 12.5rem;
     background-image: url('../img/attractive-backdrop-background-988872.jpg');
     /* background-size: 100% 200%; */
     background-size: cover;
@@ -37,16 +55,15 @@ body {
 }
 
 .clear {
-    width : 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     position: absolute;
-    right:20px;
-    top: 20px;
+    right: 1.25rem;
+    top: 1.25rem;
 }
 
 .clear i {
-    font-size: 30px;
-    /* color: #FFF; */
+    font-size: 1.875rem;
 }
 
 .clear i:hover {
@@ -59,20 +76,17 @@ body {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    /* color: #FFF; */
-    font-size: 25px;
+    font-size: 1.5rem;
     font-family: 'Titillium Web', sans-serif;
 }
 
 /* ------------ add item ------------ */
 .add-to-do {
     position: relative;
-    /* width: 360px; */
-    /* height:40px; */
-    /* background-color: #FFF; */
+    margin: .5rem auto;
     padding: 10px;
     padding-bottom: 15px;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(146, 22, 22, 0.1);
     height: 3rem;
 }
@@ -80,41 +94,44 @@ body {
 .add-to-do input {
     position: absolute;
     left: 5px;
-    height: 35px;
-    width: 300px;
+    height: 2.2rem;
+    width: 18.75rem;
     background-color: transparent;
-    /* background-color: greenyellow; */
     border: none;
-    font-size: 20px;
-    padding-left:10px;
+    font-size: 1.25rem;
+    padding-left: 10px;
     /* padding-bottom: 15px; */
 }
 
-.add-to-do input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+.add-to-do input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     color: #4162f6;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
-.add-to-do input::-moz-placeholder { /* Firefox 19+ */
+.add-to-do input::-moz-placeholder {
+    /* Firefox 19+ */
     color: #4162f6;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
-.add-to-do input:-ms-input-placeholder { /* IE 10+ */
+.add-to-do input:-ms-input-placeholder {
+    /* IE 10+ */
     color: #4162f6;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
-.add-to-do input:-moz-placeholder { /* Firefox 18- */
+.add-to-do input:-moz-placeholder {
+    /* Firefox 18- */
     color: #4162f6;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
-.add-to-do i{
+.add-to-do i {
     position: absolute;
-    right: 15px;
-    font-size: 30px;
+    right: 1rem;
+    font-size: 1.875rem;
     color: #4162f6;
 }
 
@@ -125,34 +142,34 @@ body {
 
 /* ------------ content ------------ */
 .content {
-    width: 100%;
-    /* width:380px; */
-    height: 350px;
-    max-height:400px;
-    background-color: #FFF;
-    overflow: auto;
+    height: 25rem;
+    background-color: #fff;
+    overflow: scroll;
 }
 
-.content ul {
-    padding:0;
-    margin:0;
+.content #list {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow: scroll;
 }
 
 .item {
     width: 100%;
     /* width:380px; */
-    height: 45px;
-    min-height: 45px;
+    height: 2.81rem;
+    min-height: 2.81rem;
     position: relative;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
 }
 
 .item i.co {
     position: absolute;
-    font-size: 25px;
-    padding-left:5px;
-    left:15px;
-    top:10px;
+    font-size: 1.5rem;
+    padding-left: 5px;
+    left: 15px;
+    top: 10px;
 }
 
 .item i.co:hover {
@@ -160,33 +177,59 @@ body {
 }
 
 .fa-check-circle {
-    color:#6eb200;
+    color: #6eb200;
 }
 
 .item p.text {
     position: absolute;
-    padding:0;
-    margin:0;
-    font-size: 20px;
-    left:50px;
-    top:5px;
-    /* background-color: #FFF; */
-    max-width:285px;
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+    left: 3.12rem;
+    top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 75%;
 }
 
 .lineThrough {
     text-decoration: line-through;
-    color : #ccc;
+    color: #ccc;
 }
 
 .item i.de {
     position: absolute;
-    font-size: 25px;
-    right:15px;
-    top:10px;
+    font-size: 1.5rem;
+    right: 15px;
+    top: 10px;
 }
 .item i.de:hover {
-    color:#af0000;
+    color: #af0000;
     cursor: pointer;
 }
 
+@media (max-width: 799px) and (orientation: landscape) {
+    .header {
+        height: 7rem;
+    }
+    .content {
+        height: 6.25rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 100%;
+    }
+
+    .content {
+        height: 18.75rem;
+    }
+}
